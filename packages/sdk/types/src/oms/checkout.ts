@@ -8,10 +8,17 @@ enum CheckoutStatus {
   CUSTOMER_BLACKLISTED = 'CUSTOMER_BLACKLISTED',
 }
 
+export type CheckoutQueryParameters = {
+  'geins-cart'?: string;
+  'geins-pm'?: string;
+  'geins-pt'?: string;
+  'geins-uid'?: string;
+};
+
 export type CheckoutUrlsInputType = {
-  termsPageUrl?: String;
-  redirectUrl?: String;
-  checkoutPageUrl?: String;
+  termsPageUrl?: string;
+  redirectUrl?: string;
+  checkoutPageUrl?: string;
 };
 
 export type CheckoutInputType = {
@@ -114,6 +121,7 @@ export type GenerateCheckoutTokenOptions = {
   user?: GeinsUserType;
   cloneCart?: boolean;
   isCartEditable?: boolean;
+  cloneCart?: boolean;
   selectedPaymentMethodId?: number;
   selectedShippingMethodId?: number;
   availablePaymentMethodIds?: number[];
